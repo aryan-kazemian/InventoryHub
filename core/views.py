@@ -9,7 +9,7 @@ def api_root(request):
     return Response({
         "accounts": reverse('accounts-root', request=request),
         "products": reverse('products-root', request=request),
-        "erp": request.build_absolute_uri('/api/erp/'),  # ERP main entry
+        "erp": request.build_absolute_uri('/api/erp/'),
         "docs_swagger": request.build_absolute_uri('/swagger/'),
         "docs_redoc": request.build_absolute_uri('/redoc/'),
     })
@@ -21,5 +21,4 @@ def erp_root(request):
     return Response({
         "wms": request.build_absolute_uri('/api/erp/wms/'),
         "oms": request.build_absolute_uri('/api/erp/oms/'),
-        "crm": request.build_absolute_uri('/api/erp/crm/'),
     })
