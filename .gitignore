@@ -4,7 +4,11 @@ __pycache__/
 *.pyo
 *.pyd
 *.swp
-*.env
+
+# Virtual environment
+venv/
+env/
+ENV/
 
 # Django
 *.sqlite3
@@ -12,11 +16,6 @@ __pycache__/
 media/
 staticfiles/
 .DS_Store
-
-# Virtual environment
-venv/
-env/
-ENV/
 
 # IDEs
 .vscode/
