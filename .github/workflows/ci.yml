@@ -12,8 +12,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      CI: "true"
 
     services:
       postgres:
@@ -46,10 +44,10 @@ jobs:
           done
 
       - name: Run migrations
-        run: docker compose run web python manage.py migrate
+        run: docker compose run -e CI=true web python manage.py migrate
 
       - name: Run tests
-        run: docker compose run web python manage.py test
+        run: docker compose run -e CI=true web python manage.py test
 
       - name: Stop containers
         run: docker compose down
