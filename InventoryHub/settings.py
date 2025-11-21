@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     # Internal apps
     'accounts',
     'products',
+    'core',
+    'wms',
 ]
 
 MIDDLEWARE = [
@@ -103,6 +105,7 @@ else:
             conn_max_age=600
         )
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
