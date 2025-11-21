@@ -20,7 +20,6 @@ def api_root(request):
 def erp_root(request):
     return Response({
         "wms": request.build_absolute_uri('/api/erp/wms/'),
-        "ims": request.build_absolute_uri('/api/erp/ims/'),
         "oms": request.build_absolute_uri('/api/erp/oms/'),
         "crm": request.build_absolute_uri('/api/erp/crm/'),
     })

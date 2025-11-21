@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'products',
     'core',
     'wms',
+    'oms',
 ]
 
 MIDDLEWARE = [

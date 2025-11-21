@@ -24,6 +24,7 @@ urlpatterns = [
     path('api/accounts/', include('accounts.urls')),
     path('api/products/', include('products.urls')),
     path('api/erp/wms/', include('wms.urls')),
+    path('api/erp/oms/', include('oms.urls')),
 
     # Swagger / ReDoc
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
